@@ -1,0 +1,42 @@
+@import url('bootstrap');
+@import url('bootstrap-icons');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 10dvh;
+
+  .navbar {
+    height: 100%;
+  }
+}
+
+main {
+  /* height: 80dvh; */
+
+  .card {
+    margin: 1rem;
+    width: 18rem;
+    height: 28rem;
+
+    .card-body {
+
+      .description {
+        max-height: 30%;
+      }
+
+      .card-img-top {
+        width: 90%;
+        height: 10rem;
+      }
+    }
+  }
+}
+
+footer {
+  height: 10dvh;
+}
