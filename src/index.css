@@ -16,24 +16,57 @@ header {
 }
 
 main {
-  /* height: 80dvh; */
 
   .card {
     margin: 1rem;
-    width: 18rem;
-    height: 28rem;
+    width: 90%;
+    height: 460px;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s ease;
+
+    .card-header {
+
+      h5 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
 
     .card-body {
 
-      .description {
-        max-height: 30%;
+      .product-img {
+        width: 100%;
+        height: 160px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
 
-      .card-img-top {
-        width: 90%;
-        height: 10rem;
+      .description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+
+      .product-detail {
+        padding: 16px;
       }
     }
+  }
+
+  .card:hover {
+    transition: translateY(-4px);
   }
 }
 
