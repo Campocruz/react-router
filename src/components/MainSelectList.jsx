@@ -20,7 +20,7 @@ export default function MainSelectList({ productsList, onFindTitle }) {
 
   return (
     <>
-      <label for="inputState" className="form-label">Categoria</label>
+      <label htmlFor="inputState" className="form-label">Categoria</label>
       <select name="inputState" className="form-select" defaultValue={null} onChange={(e) => {
         onFindTitle(e.target.value); console.log(e.target.value);
       }}>

@@ -11,7 +11,7 @@ export default function MainFilterBox({ onSetRenderList, products }) {
     if (inputTitle === "" || inputTitle === "All") {
       onSetRenderList(products)
     } else {
-      const filteredTitle = products.filter((product) => product.category.toLowerCase().includes(inputTitle.toLowerCase()))
+      const filteredTitle = products.filter((product) => product.category.toLowerCase().includes(inputTitle.toLowerCase()) || product.title.toLowerCase().includes(inputTitle.toLowerCase()))
       onSetRenderList(filteredTitle)
     }
   }

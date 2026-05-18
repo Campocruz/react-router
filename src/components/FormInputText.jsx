@@ -6,7 +6,7 @@ export default function FormInputText({ onFindTitle }) {
 
   return (
     <>
-      <label for="inputState" className="form-label">Cerca Prodotto</label>
+      <label htmlFor="inputState" className="form-label">Cerca Prodotto</label>
       <input type="text" className="form-control" value={inputValue} onChange={(e) => { setInputValue(e.target.value); onFindTitle(e.target.value) }} />
     </>
   )
