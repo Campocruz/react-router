@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function MainSelectList({ productsList }) {
+export default function MainSelectList({ productsList, onFindTitle }) {
 
   const [categoryList, setCategoryList] = useState([]);
   const [products, setProducts] = useState([]);
@@ -20,13 +20,15 @@ export default function MainSelectList({ productsList }) {
 
   return (
     <>
-      <label htmlFor="inputState" className="form-label">Genere</label>
-      <select name="inputState" className="form-select" defaultValue={null}>
-        <option value={null}>null</option>
+      <label for="inputState" className="form-label">Categoria</label>
+      <select name="inputState" className="form-select" defaultValue={null} onChange={(e) => {
+        onFindTitle(e.target.value); console.log(e.target.value);
+      }}>
+        <option value={null}>All</option>
         {
           categoryList.map((category, index) => <option key={index} value={category}>{category}</option>)
         }
-      </select>
+      </select >
     </>
   )
 }

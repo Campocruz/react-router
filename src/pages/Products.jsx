@@ -18,9 +18,10 @@ export default function Products({ titlePage, }) {
       })
   }
 
-  function filteredProduct(inputValue) {
-    const filter = renderList.filter(item => item.title.includes(inputValue))
-  }
+  // function filteredProduct(inputValue) {
+  //   const filter = products.filter(item => item.title.includes(inputValue))
+  //   setProducts(filter)
+  // }
 
   useEffect(() => {
     getProductsUrl(urlApi)
@@ -33,7 +34,14 @@ export default function Products({ titlePage, }) {
           <p>{titlePage} page</p>
         </section>
         <section>
-          <MainFilterBox onSetRenderList={setRenderList} productsList={renderList} />
+          <div className="row align-items-end">
+            <div className="col-12">
+              <MainFilterBox onSetRenderList={setRenderList} products={products} />
+            </div>
+          </div>
+          <div className="col-1 text-center">
+            <p>{renderList.length} item</p>
+          </div>
         </section>
         <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4">
           {

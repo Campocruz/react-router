@@ -59,9 +59,7 @@ main {
         -webkit-box-orient: vertical;
       }
 
-      .product-detail {
-        padding: 16px;
-      }
+      .product-detail {}
     }
   }
 
@@ -72,4 +70,8 @@ main {
 
 footer {
   height: 10dvh;
+
+  .row {
+    width: 100%;
+  }
 }

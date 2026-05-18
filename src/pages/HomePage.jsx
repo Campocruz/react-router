@@ -6,10 +6,11 @@ export default function HomePage({ titlePage }) {
         <section>
           <p>{titlePage}</p>
         </section>
-        <div className="row">
-          <div className="col">
-          </div>
-        </div>
+
+        <section>
+
+        </section>
+        
       </div>
     </>
   )

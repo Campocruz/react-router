@@ -7,16 +7,16 @@ export default function AppFooter({ dataFooter }) {
 
   return (
     <>
-      <footer className="container">
-        <div className="row justify-content-between align-items-center">
-          <div className="col-6">
+      <footer className="container-flush bg-body-tertiary">
+        <div className="row justify-content-around align-items-end">
+          <div className="col-4">
             <ul className="list-unstyled d-flex justify-content-around">
               {
                 dataFooter.map(link => <AppNavItemList key={link.id} link={link} />)
               }
             </ul>
           </div>
-          <div className="col-2">
+          <div className="col-1 p-0">
             <AppNavLogo logo={logoFooter} width="100px" height="80px" />
           </div>
         </div>

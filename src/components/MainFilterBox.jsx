@@ -1,17 +1,17 @@
 import MainSelectList from "./MainSelectList"
 import FormInputText from "./FormInputText"
 
-export default function MainFilterBox({onSetRenderList, productsList }) {
+export default function MainFilterBox({ onSetRenderList, products }) {
 
   function selectedGenre(e) {
     onSetSelectGenre(e.target.value)
   }
 
   function findTitle(inputTitle) {
-    if (inputTitle === "") {
-      onSetRenderList(productsList)
+    if (inputTitle === "" || inputTitle === "All") {
+      onSetRenderList(products)
     } else {
-      const filteredTitle = productsList.filter((product) => product.title.toLowerCase().includes(inputTitle.toLowerCase()))
+      const filteredTitle = products.filter((product) => product.category.toLowerCase().includes(inputTitle.toLowerCase()))
       onSetRenderList(filteredTitle)
     }
   }
@@ -19,10 +19,10 @@ export default function MainFilterBox({onSetRenderList, productsList }) {
   return (
     <>
       <div className="row d-flex justify-content-center m-4">
-        <div className="col-md-2">
-          <MainSelectList productsList={productsList} />
+        <div className="col-md-2 text-center">
+          <MainSelectList productsList={products} onFindTitle={findTitle} />
         </div>
-        <div className="col-md-2">
+        <div className="col-md-2 text-center">
           <FormInputText onFindTitle={findTitle} />
         </div>
       </div>
