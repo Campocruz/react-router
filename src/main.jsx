@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route element={<DefaultLayout dataList={dataLayout} />}>
+        <Route element={<DefaultLayout />}>
           <Route path='/' element={<HomePage titlePage={"Home Page"} />}></Route>
           <Route path='/products' element={<Products titlePage={"Products"} />}></Route>
           <Route path='/about' element={<About titlePage={"about"} />}></Route>

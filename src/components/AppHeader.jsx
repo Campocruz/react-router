@@ -1,10 +1,11 @@
 import { NavLink, Link } from "react-router";
 import logo from "../assets/logo/logo.png"
+import dataHeader from "../assets/data/dataLayout"
 import AppNavItemList from "./AppNavItemList";
 import AppNavSearch from "./AppNavSearch";
 import AppNavLogo from "./AppNavLogo";
 
-export default function AppHeader({ dataHeader }) {
+export default function AppHeader() {
 
   return (
     <>
@@ -22,7 +23,9 @@ export default function AppHeader({ dataHeader }) {
                   dataHeader.map(link => <AppNavItemList key={link.id} link={link} />)
                 }
               </ul>
-              <AppNavSearch />
+              <div className="d-none">
+                <AppNavSearch />
+              </div>
             </div>
           </div>
         </nav>

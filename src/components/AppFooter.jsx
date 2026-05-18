@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import logoFooter from "../assets/logo/logoFooter.png"
+import dataFooter from "../assets/data/dataLayout"
 import AppNavLogo from "./AppNavLogo";
 import AppNavItemList from "./AppNavItemList";
 
-export default function AppFooter({ dataFooter }) {
+export default function AppFooter() {
 
   return (
     <>

@@ -27,7 +27,7 @@ main {
 
     .card-header {
 
-      h5 {
+      h6 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

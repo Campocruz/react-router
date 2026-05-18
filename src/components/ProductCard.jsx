@@ -4,7 +4,7 @@ export default function ProductCard({ product }) {
     <>
       <div className="card">
         <div className="card-header">
-          <h5><a href="">{product.title}</a></h5>
+          <h6><a href="">{product.title}</a></h6>
         </div>
         <div className="card-body">
           <section className="product-img mb-2">
