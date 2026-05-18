@@ -9,7 +9,7 @@ export default function AppFooter() {
   return (
     <>
       <footer className="container-flush bg-body-tertiary">
-        <div className="row justify-content-around align-items-end">
+        <div className="row justify-content-around align-items-center">
           <div className="col-4">
             <ul className="list-unstyled d-flex justify-content-around">
               {
