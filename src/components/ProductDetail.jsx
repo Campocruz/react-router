@@ -10,7 +10,7 @@ export default function ProductDetail({ detail }) {
           <div className="col-6 mt-5">
             <img src={detail.image} alt="" />
           </div>
-          <div className="col-6 mt-5">
+          <div className="col-6 mt-5 d-flex justify-content-center">
             <ul className="list-unstyled">
               <li><strong>Categoria: </strong>{detail.category}</li>
               <li><strong>Rate: </strong>{detail.rating.rate} & <strong>Count: </strong>{detail.rating.count}</li>
