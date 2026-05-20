@@ -1,10 +1,12 @@
+import { Link } from "react-router";
+
 export default function ProductCard({ product }) {
 
   return (
     <>
       <div className="card">
         <div className="card-header">
-          <h6><a href="">{product.title}</a></h6>
+          <h6><Link to={`${product.id}`}>{product.title}</Link></h6>
         </div>
         <div className="card-body">
           <section className="product-img mb-2">

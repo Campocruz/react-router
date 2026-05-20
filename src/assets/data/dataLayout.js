@@ -19,6 +19,11 @@ const linkListHeaderFooter = [
     text: "Contact",
     path: "/contact",
   },
+  {
+    id: 5,
+    text: "Rick & Morty",
+    path: "/rickMorty",
+  },
 ];
 
 
