@@ -32,9 +32,8 @@ export default function ProductDetailPage() {
       .finally(() => setLoading(false))
   }, [id])
 
-
   if (loading) { return <LoadingPage /> }
 
-  return <ProductDetail detail={productDetail} />
+  return <ProductDetail detail={productDetail} nav={navigate} />
 
 }
