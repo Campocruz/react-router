@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router"
+
 export default function PageNotFound() {
+  const navigate = useNavigate();
 
   return (
     <>
@@ -6,6 +9,7 @@ export default function PageNotFound() {
         <section className="text-center vh-100">
           <h1><strong>404</strong></h1>
           <p>Page not Foound</p>
+          <button className="btn btn-secondary" onClick={() => navigate("/")}>Home Page</button>
         </section>
       </div>
     </>

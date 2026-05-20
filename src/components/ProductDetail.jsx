@@ -8,15 +8,15 @@ export default function ProductDetail({ detail, nav }) {
             <h3>{detail.title}</h3>
           </div>
           <div className="col-4">
-            <div className="row">
-              <div className="col-6">
+            <div className="d-flex justify-content-around">
+              <div className="">
                 {
                   detail.id === 1 ? "" :
-                    <button className="btn" onClick={() => { nav(`/products/${detail.id - 1}`) }}>Precedente</button>
+                    <button className="btn btn-lg btn-secondary btn-page" onClick={() => { nav(`/products/${detail.id - 1}`) }}>Precedente</button>
                 }
               </div>
-              <div className="col-6">
-                <button className="btn" onClick={() => { nav(`/products/${detail.id + 1}`) }}>Prossimo</button>
+              <div className="">
+                <button className="btn btn-lg btn-secondary btn-page" onClick={() => { nav(`/products/${detail.id + 1}`) }}>Prossimo</button>
               </div>
             </div>
           </div>

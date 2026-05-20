@@ -68,6 +68,12 @@ main {
   }
 }
 
+
+.btn-page {
+  width: 9rem;
+}
+
+
 footer {
   height: 10dvh;
 
