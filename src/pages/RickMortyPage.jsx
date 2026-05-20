@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PersonalityCard from "../components/PersonalityCard";
 
-export default function RickMorty() {
+export default function RickMortyPage() {
 
   const urlApi = "https://rickandmortyapi.com/api/character/"
 

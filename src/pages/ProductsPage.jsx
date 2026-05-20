@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import MainFilterBox from "../components/MainFilterBox";
 
-export default function Products({ titlePage, }) {
+export default function ProductsPage({ titlePage, }) {
 
   const urlApi = "https://fakestoreapi.com/products"
 
@@ -17,11 +17,6 @@ export default function Products({ titlePage, }) {
         setRenderList(data)
       })
   }
-
-  // function filteredProduct(inputValue) {
-  //   const filter = products.filter(item => item.title.includes(inputValue))
-  //   setProducts(filter)
-  // }
 
   useEffect(() => {
     getProductsUrl(urlApi)

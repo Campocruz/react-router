@@ -11,11 +11,11 @@ import DefaultLayout from './layout/DefaultLayout.jsx'
 
 // Import Page Components
 import HomePage from './pages/HomePage.jsx'
-import Products from './pages/Products.jsx'
-import About from './pages/About.jsx'
-import RickMorty from './pages/RickMorty.jsx'
+import ProductsPage from './pages/ProductsPage.jsx'
+import AboutPage from './pages/AboutPage.jsx'
+import RickMortyPage from './pages/RickMortyPage.jsx'
 import PersonalityPage from './pages/PersonalityPage.jsx'
-import ProductDetail from './pages/ProductDetail.jsx'
+import ProductDetailPage from './pages/ProductDetailPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,12 +24,12 @@ createRoot(document.getElementById('root')).render(
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<HomePage titlePage={"Home Page"} />} />
 
-          <Route path='/products' element={<Products titlePage={"Products"} />} />
-          <Route path='/products/:id' element={<ProductDetail />} />
+          <Route path='/products' element={<ProductsPage titlePage={"Products"} />} />
+          <Route path='/products/:id' element={<ProductDetailPage />} />
 
-          <Route path='/about' element={<About titlePage={"about"} />} />
+          <Route path='/about' element={<AboutPage titlePage={"about"} />} />
 
-          <Route path='/rickmorty' element={<RickMorty />} />
+          <Route path='/rickmorty' element={<RickMortyPage />} />
           <Route path="/personality/:id" element={<PersonalityPage />} />
         </Route>
       </Routes>

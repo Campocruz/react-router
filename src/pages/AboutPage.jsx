@@ -1,6 +1,6 @@
 import Accordion from "../components/Accordion/Accordion";
 
-export default function About({ titlePage }) {
+export default function AboutPage({ titlePage }) {
 
   return (
     <>
