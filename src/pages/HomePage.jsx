@@ -1,4 +1,3 @@
-import Carousel from "../components/Carusel/Carousel";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 export default function HomePage({ titlePage }) {
@@ -14,9 +13,6 @@ export default function HomePage({ titlePage }) {
           <Jumbotron />
         </section>
 
-        <section>
-          <Carousel />
-        </section>
       </div>
     </>
   )

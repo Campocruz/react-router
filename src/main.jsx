@@ -16,6 +16,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import RickMortyPage from './pages/RickMortyPage.jsx'
 import PersonalityPage from './pages/PersonalityPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
+import PageNotFound from './pages/PageNotFound.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -31,6 +32,8 @@ createRoot(document.getElementById('root')).render(
 
           <Route path='/rickmorty' element={<RickMortyPage />} />
           <Route path="/personality/:id" element={<PersonalityPage />} />
+
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
