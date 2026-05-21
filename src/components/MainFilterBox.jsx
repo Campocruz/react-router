@@ -1,18 +1,23 @@
 import MainSelectList from "./MainSelectList"
 import FormInputText from "./FormInputText"
 
-export default function MainFilterBox({ onSetRenderList, products }) {
+import { useContext } from "react"
+import ProductsContext from "../contexts/ProductsContext"
+
+export default function MainFilterBox() {
+
+  const { setRenderList, products } = useContext(ProductsContext)
 
   function selectedGenre(e) {
-    onSetSelectGenre(e.target.value)
+    setSelectGenre(e.target.value)
   }
 
   function findTitle(inputTitle) {
     if (inputTitle === "" || inputTitle === "All") {
-      onSetRenderList(products)
+      setRenderList(products)
     } else {
       const filteredTitle = products.filter((product) => product.category.toLowerCase().includes(inputTitle.toLowerCase()) || product.title.toLowerCase().includes(inputTitle.toLowerCase()))
-      onSetRenderList(filteredTitle)
+      setRenderList(filteredTitle)
     }
   }
 

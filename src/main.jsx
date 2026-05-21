@@ -18,6 +18,7 @@ import PersonalityPage from './pages/PersonalityPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
